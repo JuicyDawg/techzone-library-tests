@@ -1,0 +1,23 @@
+{
+  "name": "techzone-library-tests",
+  "version": "1.0.0",
+  "description": "Unit tests for selected functions of a JavaScript utility library, used by the TechZone online shop",
+  "scripts": {
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuicyDawg/techzone-library-tests.git"
+  },
+  "keywords": [],
+  "author": "Nicolae Dobinda",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/JuicyDawg/techzone-library-tests/issues"
+  },
+  "homepage": "https://github.com/JuicyDawg/techzone-library-tests#readme",
+  "devDependencies": {
+    "jest": "^30.5.2"
+  }
+}

@@ -29,3 +29,13 @@ jobs:
       # Run the Jest unit tests with coverage
       - name: Run tests
         run: npm test
+
+      # Send the coverage report (coverage/lcov.info) to Coveralls.
+      # GITHUB_TOKEN is created automatically by GitHub for each run,
+      # so no secret token is stored in the public repository.
+      # "if: always()" uploads coverage even when some tests fail.
+      - name: Upload coverage to Coveralls
+        if: always()
+        uses: coverallsapp/github-action@v2
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}

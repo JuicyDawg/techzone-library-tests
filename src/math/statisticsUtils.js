@@ -31,6 +31,6 @@ export function max(arr) {
  * @returns {number} Sum of values.
  */
 export function sum(arr) {
-  return arr.reduce((total, value) => total + value);
+  // Fixed (#4): start from 0 so an empty array returns 0 instead of throwing
+  return arr.reduce((total, value) => total + value, 0);
 }
-

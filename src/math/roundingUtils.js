@@ -1,4 +1,3 @@
-
 /**
  * Rounds a number down.
  * @param {number} n - Input number.
@@ -25,5 +24,6 @@ export function ceil(n) {
  */
 export function roundTo(n, decimals) {
   const factor = 10 ** decimals;
-  return Math.round(n * factor) / factor;
+  // Fixed (#5): Number.EPSILON corrects floating point errors such as 1.005 -> 1.01
+  return Math.round((n + Number.EPSILON) * factor) / factor;
 }

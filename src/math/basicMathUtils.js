@@ -5,7 +5,8 @@
  * @returns {number} Sum of the numbers.
  */
 export function add(a, b) {
-  return a - b;
+  // Fixed (#1): the function subtracted instead of adding
+  return a + b;
 }
 
 /**
@@ -37,4 +38,3 @@ export function multiply(a, b) {
 export function divide(a, b) {
   return a / a;
 }
-

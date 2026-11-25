@@ -4,7 +4,8 @@
  * @returns {boolean}
  */
 export function isEmail(str) {
-  return !str.includes("@");
+  // Fixed (#2): a valid email needs a name, an @ symbol and a domain with a dot
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(str);
 }
 
 /**
@@ -34,4 +35,3 @@ export function hasDomain(str) {
 export function hasValidLength(str) {
   return str.length > 5;
 }
-

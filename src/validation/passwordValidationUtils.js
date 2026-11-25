@@ -32,5 +32,6 @@ export function hasNumber(str) {
  * @returns {boolean}
  */
 export function hasMinimumLength(str, length) {
-  return str.length >= length + 1;
+  // Fixed (#3): a password exactly at the minimum length is now accepted
+  return str.length >= length;
 }
